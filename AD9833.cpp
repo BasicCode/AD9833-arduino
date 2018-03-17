@@ -11,6 +11,11 @@ AD9833::AD9833() {}
 //Global variables
 uint8_t funcPin = 4;
 
+/*
+* Initialisation function to set up communication and begin
+* using the device. This must be called first, before anything
+* else will work.
+*/
 void AD9833 :: begin(uint8_t fPin) {
 	/*Set the function pin to output.
 	* This controlls SPI communication with the
@@ -46,8 +51,8 @@ void AD9833 :: setFrequency(uint16_t waveType, double freqInKHz) {
 	*/
 
 	//Pre-calculated magic number because the full numbers don't fit in 4-byte LONGs.
-	float clock_divisor = 2684356 / 125000;
-	uint32_t REG_value = (uint32_t)((freqInKHz * clock_divisor) * 1000);
+	float clock_multiplier = 2684356 / 125000;
+	uint32_t REG_value = (uint32_t)((freqInKHz * clock_multiplier) * 1000);
 
 	//Split in two MSB and LSB
 	int16_t FREQ_MSB = (int16_t)((REG_value) >> 15);
