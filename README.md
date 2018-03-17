@@ -28,7 +28,6 @@ Initialise the chip in the Arduino **setup()** function:
 ```
 ad9833.begin(FNC_PIN);
 ```
-<br>
 Within either the **setup()** or **loop()** functions you can then tell the device to start generating a signal:<br>
 This method accepts a waveform type of either **SINE_WAVE**, **SQUARE_WAVE**, or **TRIANGLE_WAVE**, and a frequency in KHz.
 ```
