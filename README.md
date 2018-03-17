@@ -16,7 +16,7 @@ Download the ZIP file and extract it to the **Arduino/libraries** folder. Open t
 | **VCC** | **5V** |
 | **GND** | **GND** |
 | **REF** | NC |
-<br><br>
+
 ## Usage
 There are only two functions required to initialise and then control the device and generate a simple output signal.<br>
 First instantiate the AD9833 object and select a function pin for SPI communication control:
@@ -28,11 +28,11 @@ Initialise the chip in the Arduino **setup()** function:
 ```
 ad9833.begin(FNC_PIN);
 ```
-<br><br>
+<br>
 Within either the **setup()** or **loop()** functions you can then tell the device to start generating a signal:<br>
 This method accepts a waveform type of either **SINE_WAVE**, **SQUARE_WAVE**, or **TRIANGLE_WAVE**, and a frequency in KHz.
 ```
-ad9833.setFrequency(**waveType**, **frequencyInKHz**);
+ad9833.setFrequency(waveType, frequencyInKHz);
 ```
-<br><br>
+<br>
 That's it. The device should now be generating the requested signal.
