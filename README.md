@@ -1,9 +1,9 @@
 # AD9833 Basic Arduino Library
 
 This is a simple, cut-down library to get the AD9833 up and running as a signal generator. It provides an initialisation function and then a function to set the frequency and waveform.<br>
-<br>
-The project was based on a more comprehensive library here:<br>
-https://github.com/Billwilliams1952/AD9833-Library-Arduino
+
+* The project was based on a more comprehensive library here: https://github.com/Billwilliams1952/AD9833-Library-Arduino
+* AD9833 datasheet here: http://www.analog.com/media/en/technical-documentation/data-sheets/AD9833.pdf
 
 ## Installation
 Download the ZIP file and extract it to the **Arduino/libraries** folder. Open the Arduino IDE, click **File**-**Examples**-**AD9833_test**.
