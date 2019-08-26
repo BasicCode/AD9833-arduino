@@ -18,7 +18,7 @@ uint8_t funcPin = 4;
 */
 void AD9833 :: begin(uint8_t fPin) {
 	/*Set the function pin to output.
-	* This controlls SPI communication with the
+	* This controls SPI communication with the
 	* chip. Active LOW.
 	*/
 	funcPin = fPin;
@@ -76,7 +76,7 @@ void AD9833 :: reset() {
 }
 
 /*
-* Sends the initial controll command to prepare the
+* Sends the initial control command to prepare the
 * chip to receive frequency information. This will
 * also update the waveform.
 * (Other features can be implemented here if
